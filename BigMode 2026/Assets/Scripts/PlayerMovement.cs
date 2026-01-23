@@ -1,52 +1,56 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody rb;
+    private PlayerActionMap playerControls;
 
-    float xDir;
-    float zDir;
-    float yDir;
-    float jumpforce = 10;
-    bool jumpKey;
-    public float playerSpeed;
-    
+    [SerializeField] private CharacterController controller;
 
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpHeight = 2f;
+    [SerializeField] private float gravity = -9.81f;
 
+    private Vector2 moveInput;
+    private Vector3 velocity;
+    private bool isGrounded;
 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        playerControls = new PlayerActionMap();
     }
+
 
     void Update()
     {
-        xDir = Input.GetAxis("Horizontal");
-        zDir = Input.GetAxis("Vertical");
-        jumpKey = Input.GetKey(KeyCode.Space);
+       isGrounded = controller.isGrounded;
 
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f; 
+        }
+
+        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+
+        controller.Move(move * moveSpeed * Time.deltaTime);
+
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 
-
-    // Update is called once per frame
-    void FixedUpdate()
+    private void OnJump()
     {
-        Vector3 moveDir = new Vector3(xDir, 0, zDir);
+         if (!isGrounded) return;
 
-        moveDir.Normalize();
-        if (jumpKey && IsGrounded() && yDir == 0)
-        {
-            yDir = jumpforce;
-        }
-        else
-        {
-            yDir = 0;
-        }
-        
+        velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
 
-
+    private void OnMovement(InputValue inputValue)
+    {
+        moveInput = inputValue.Get<Vector2>();
+    }
 }
