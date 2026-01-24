@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
 
+    private bool hasJumped = false;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -43,10 +45,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnJump()
-    {
-         if (!isGrounded) return;
+    {   
+        if(!isGrounded && hasJumped == false)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            hasJumped = true;
+        }
+         if (!isGrounded && hasJumped) return;
 
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        hasJumped = false;
     }
 
     private void OnMovement(InputValue inputValue)
