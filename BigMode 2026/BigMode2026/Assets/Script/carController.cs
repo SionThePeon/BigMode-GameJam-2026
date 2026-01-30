@@ -10,6 +10,7 @@ public class CarController : MonoBehaviour
     [SerializeField] private float carSpeed;
     [SerializeField] private float backSpeed;
     [SerializeField] private float turnSpeed;
+    [SerializeField] private float rotSpeed;
 
     void Start()
     {
@@ -34,13 +35,20 @@ public class CarController : MonoBehaviour
         }
         Vector3 forwardForce = transform.forward * InputKey.z * speedMultiplier;
         Vector3 lateralForce = transform.right * InputKey.x * turnSpeed;
-
-        rb.AddForce(forwardForce + lateralForce);
-
-        float rotSpeed = 30;
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rotSpeed = 65;
+        }
+        else
+        {
+            rotSpeed = 30;
+        }
         float yRot = rotSpeed * Time.fixedDeltaTime * InputKey.x;
         Quaternion deltaRotation = Quaternion.Euler(0, yRot, 0);
+
         rb.MoveRotation(rb.rotation * deltaRotation);
+
+        rb.AddForce(forwardForce + lateralForce);
 
     }
 
