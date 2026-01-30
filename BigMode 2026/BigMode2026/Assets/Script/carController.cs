@@ -1,3 +1,5 @@
+using System.Data.Common;
+using JetBrains.Annotations;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -34,6 +36,12 @@ public class CarController : MonoBehaviour
         Vector3 lateralForce = transform.right * InputKey.x * turnSpeed;
 
         rb.AddForce(forwardForce + lateralForce);
+
+        float rotSpeed = 30;
+        float yRot = rotSpeed * Time.fixedDeltaTime * InputKey.x;
+        Quaternion deltaRotation = Quaternion.Euler(0, yRot, 0);
+        rb.MoveRotation(rb.rotation * deltaRotation);
+
     }
 
 }
