@@ -1,5 +1,6 @@
 using System.Data.Common;
 using JetBrains.Annotations;
+using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -11,6 +12,9 @@ public class CarController : MonoBehaviour
     [SerializeField] private float backSpeed;
     [SerializeField] private float turnSpeed;
     [SerializeField] private float rotSpeed;
+
+    [SerializeField] private float maxSpeed;
+
 
     void Start()
     {
@@ -37,18 +41,22 @@ public class CarController : MonoBehaviour
         Vector3 lateralForce = transform.right * InputKey.x * turnSpeed;
         if (Input.GetKey(KeyCode.Space))
         {
-            rotSpeed = 65;
+            rotSpeed = 75;
+            rb.linearDamping = 0.2f;
         }
         else
         {
             rotSpeed = 30;
+            rb.linearDamping = 0.05f;
         }
         float yRot = rotSpeed * Time.fixedDeltaTime * InputKey.x;
         Quaternion deltaRotation = Quaternion.Euler(0, yRot, 0);
 
         rb.MoveRotation(rb.rotation * deltaRotation);
-
-        rb.AddForce(forwardForce + lateralForce);
+        if(math.abs(rb.linearVelocity.magnitude) < maxSpeed)
+        {
+             rb.AddForce(forwardForce + lateralForce);
+        }
 
     }
 
