@@ -2,12 +2,17 @@ using System.Data.Common;
 using JetBrains.Annotations;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CarController : MonoBehaviour
 {
     public Rigidbody rb;
     public Vector3 InputKey;
+
+    public GameObject pizza;
+
+    private float pizzaForce = 900f;
     [SerializeField] private float carSpeed;
     [SerializeField] private float backSpeed;
     [SerializeField] private float turnSpeed;
@@ -23,6 +28,10 @@ public class CarController : MonoBehaviour
     
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ShootPizza();
+        }
         InputKey = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
     }
 
@@ -41,12 +50,12 @@ public class CarController : MonoBehaviour
         Vector3 lateralForce = transform.right * InputKey.x * turnSpeed;
         if (Input.GetKey(KeyCode.Space))
         {
-            rotSpeed = 75;
-            rb.linearDamping = 0.2f;
+            rotSpeed = 140;
+            rb.linearDamping = 0.45f;
         }
         else
         {
-            rotSpeed = 30;
+            rotSpeed = 60;
             rb.linearDamping = 0.05f;
         }
         float yRot = rotSpeed * Time.fixedDeltaTime * InputKey.x;
@@ -58,6 +67,14 @@ public class CarController : MonoBehaviour
              rb.AddForce(forwardForce + lateralForce);
         }
 
+    }
+
+    void ShootPizza()
+    {
+        GameObject pizzaInstance = Instantiate(pizza, transform.position + transform.forward * 6.3f,Quaternion.identity);
+        Rigidbody pizzaRB = pizzaInstance.GetComponent<Rigidbody>();
+        pizzaRB.linearVelocity = rb.linearVelocity + transform.forward * 20f;
+        
     }
 
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - IceyTrack
+  - Pizza
   layers:
   - Default
   - TransparentFX
