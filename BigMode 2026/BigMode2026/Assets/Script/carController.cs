@@ -12,7 +12,6 @@ public class CarController : MonoBehaviour
 
     public GameObject pizza;
 
-    private float pizzaForce = 900f;
     [SerializeField] private float carSpeed;
     [SerializeField] private float backSpeed;
     [SerializeField] private float turnSpeed;

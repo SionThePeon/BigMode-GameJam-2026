@@ -335,12 +335,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307199320}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.43334, y: 12.7, z: -61}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 9.180679, z: -66.42227}
   m_LocalScale: {x: 23.57836, y: 23.57836, z: 23.57836}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 335059833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &307199325
 MonoBehaviour:
@@ -354,6 +354,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9335ca022f9886549b6d5df0b4d7d3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!1 &335059831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335059833}
+  - component: {fileID: 335059832}
+  m_Layer: 0
+  m_Name: Zone Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &335059832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335059831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc361bda71eb2114cb900f05a1356338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZoneManager
+  car: {fileID: 8386052337367031217}
+  arrow: {fileID: 5820538963379033233, guid: 71c53a978ca54d943909f4ba3fbbeb05, type: 3}
+--- !u!4 &335059833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335059831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.43335, y: 3.51932, z: 5.42227}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 307199324}
+  - {fileID: 681065967}
+  - {fileID: 741392788}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342579805
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,12 +758,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681065962}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.43334, y: 12.7, z: -340}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 9.180679, z: -345.42227}
   m_LocalScale: {x: 23.57836, y: 23.57836, z: 23.57836}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 335059833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &741392783
 GameObject:
@@ -833,12 +882,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741392783}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97.2, y: 12.7, z: -197.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 88.76665, y: 9.180679, z: -202.62227}
   m_LocalScale: {x: 23.57836, y: 23.57836, z: 23.57836}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 335059833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &776845955
 GameObject:
@@ -2551,8 +2600,8 @@ MonoBehaviour:
   rb: {fileID: 9163398659556558606}
   InputKey: {x: 0, y: 0, z: 0}
   pizza: {fileID: 1510062926099457811, guid: 7b1c60840214afb4db0806c5fbd2956f, type: 3}
-  carSpeed: 350
-  backSpeed: 270
+  carSpeed: 300
+  backSpeed: 200
   turnSpeed: 300
   rotSpeed: 0
   maxSpeed: 70
@@ -2621,6 +2670,4 @@ SceneRoots:
   - {fileID: 1466726792}
   - {fileID: 1691119056}
   - {fileID: 9163398659556558603}
-  - {fileID: 307199324}
-  - {fileID: 681065967}
-  - {fileID: 741392788}
+  - {fileID: 335059833}
