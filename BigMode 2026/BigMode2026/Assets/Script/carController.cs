@@ -37,13 +37,16 @@ public class CarController : MonoBehaviour
 
     void FixedUpdate()
     {
+        int direction;
         float speedMultiplier;
         if (InputKey.z >= 0)
         {
+            direction = 1;
             speedMultiplier = carSpeed;
         }
         else
         {   
+            direction = -1;
             speedMultiplier = backSpeed;
         }
         Vector3 forwardForce = transform.forward * InputKey.z * speedMultiplier;
@@ -55,13 +58,13 @@ public class CarController : MonoBehaviour
         }
         else
         {
-            rotSpeed = 60;
+            rotSpeed = 80;
             rb.linearDamping = 0.05f;
         }
-        float yRot = rotSpeed * Time.fixedDeltaTime * InputKey.x;
+        float yRot = rotSpeed * Time.fixedDeltaTime * InputKey.x * direction;
         Quaternion deltaRotation = Quaternion.Euler(0, yRot, 0);
 
-        rb.MoveRotation(rb.rotation * deltaRotation);
+        rb.MoveRotation(rb.rotation * deltaRotation );
         if(math.abs(rb.linearVelocity.magnitude) < maxSpeed)
         {
              rb.AddForce(forwardForce + lateralForce);
