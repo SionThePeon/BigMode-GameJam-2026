@@ -1,3 +1,4 @@
+using System;
 using System.Data.Common;
 using JetBrains.Annotations;
 using Unity.Mathematics;
@@ -12,11 +13,9 @@ public class CarController : MonoBehaviour
 
     public GameObject pizza;
 
-    private float pizzaForce = 900f;
     [SerializeField] private float carSpeed;
     [SerializeField] private float backSpeed;
-    [SerializeField] private float turnSpeed;
-    [SerializeField] private float rotSpeed;
+    private float rotSpeed;
 
     [SerializeField] private float maxSpeed;
 
@@ -50,7 +49,6 @@ public class CarController : MonoBehaviour
             speedMultiplier = backSpeed;
         }
         Vector3 forwardForce = transform.forward * InputKey.z * speedMultiplier;
-        Vector3 lateralForce = transform.right * InputKey.x * turnSpeed;
         if (Input.GetKey(KeyCode.Space))
         {
             rotSpeed = 140;
@@ -61,13 +59,21 @@ public class CarController : MonoBehaviour
             rotSpeed = 80;
             rb.linearDamping = 0.05f;
         }
-        float yRot = rotSpeed * Time.fixedDeltaTime * InputKey.x * direction;
+        float turningLock = rb.linearVelocity.magnitude * 0.1f;
+        if (turningLock > 1f)
+        {
+            turningLock = 1f;
+        }
+        float yRot = rotSpeed * Time.fixedDeltaTime * InputKey.x * direction * turningLock;
         Quaternion deltaRotation = Quaternion.Euler(0, yRot, 0);
-
-        rb.MoveRotation(rb.rotation * deltaRotation );
+        
+        
+        rb.MoveRotation(rb.rotation * deltaRotation);
+        
+        
         if(math.abs(rb.linearVelocity.magnitude) < maxSpeed)
         {
-             rb.AddForce(forwardForce + lateralForce);
+             rb.AddForce(forwardForce);
         }
 
     }

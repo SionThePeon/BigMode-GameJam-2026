@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ZoneManager : MonoBehaviour
+{
+    public GameObject car;
+    private List<GameObject> zones = new();
+
+    public GameObject arrow;
+
+    private GameObject arrowInstance;
+
+
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        foreach (Transform child in transform)
+        {
+            zones.Add(child.gameObject);
+        }
+        arrowInstance = Instantiate(arrow, car.transform.position, Quaternion.identity);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        zones.RemoveAll(t => t == null);
+        if (zones.Count != 0)
+        {
+            GameObject nearest = GetNearest();
+            Vector3 dir = car.transform.position - nearest.transform.position;
+            Vector3 dirLocked = new Vector3(dir.x, 0f, dir.z).normalized;
+            arrowInstance.transform.rotation = Quaternion.LookRotation(dirLocked);
+            arrowInstance.transform.position = car.transform.position - dirLocked * 10f;
+        }
+        else if (arrowInstance != null)
+        {
+            Destroy(arrowInstance);
+        }
+    }
+    GameObject GetNearest()
+    {
+        GameObject nearest = zones[0];
+        float minDist = Math.Abs((car.transform.position - nearest.transform.position).magnitude);
+        foreach (GameObject zone in zones)
+        {
+            float dist = Math.Abs((car.transform.position - zone.transform.position).magnitude);
+            if (dist < minDist)
+            {
+                nearest = zone;
+                minDist = dist;
+            }
+        }
+        return nearest;
+    }
+
+    }
+    
