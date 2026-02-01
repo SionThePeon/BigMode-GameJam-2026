@@ -2600,11 +2600,9 @@ MonoBehaviour:
   rb: {fileID: 9163398659556558606}
   InputKey: {x: 0, y: 0, z: 0}
   pizza: {fileID: 1510062926099457811, guid: 7b1c60840214afb4db0806c5fbd2956f, type: 3}
-  carSpeed: 300
-  backSpeed: 200
-  turnSpeed: 300
-  rotSpeed: 0
-  maxSpeed: 70
+  carSpeed: 210
+  backSpeed: 180
+  maxSpeed: 57
 --- !u!54 &9163398659556558606
 Rigidbody:
   m_ObjectHideFlags: 0
