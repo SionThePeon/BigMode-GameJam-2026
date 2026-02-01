@@ -8,6 +8,7 @@ public class zoneScript : MonoBehaviour
         {
             Debug.Log("PIZZAAA");
             Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
