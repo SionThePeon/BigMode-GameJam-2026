@@ -85,7 +85,7 @@ public class CarController : MonoBehaviour
             rotSpeed = 100;
             rb.linearDamping = 0.1f;
         }
-        float turningLock = rb.linearVelocity.magnitude * 0.1f;
+        float turningLock = rb.linearVelocity.magnitude * 0.4f;
         if (turningLock > 1f)
         {
             turningLock = 1f;
