@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour
 
     void Update()
     {
-        pizzaText.text = "Pizza: " + playerStats.pizzaCount;
+        pizzaText.text = playerStats.pizzaCount.ToString();
 
         
         float percent = playerStats.gas / playerStats.maxGas;
