@@ -22,17 +22,15 @@ public class CarController : MonoBehaviour
 
     [SerializeField] private float maxSpeed;
 
-    public int pizzaCount;
+    public int pizzaCount = 10;
 
-    public float gas;
+    public float gas = 20f;
     public float maxGas;
 
 
     void Start()
     {
-       gas = 20f;
        maxGas = gas;
-       pizzaCount = 10;
        rb = GetComponent<Rigidbody>();
     }
     
@@ -61,24 +59,31 @@ public class CarController : MonoBehaviour
         float speedMultiplier;
         if (InputKey.z >= 0)
         {
-            direction = 1;
             speedMultiplier = carSpeed;
         }
         else
-        {   
-            direction = -1;
+        {  
             speedMultiplier = backSpeed;
+        }
+        float dot = Vector3.Dot(rb.linearVelocity, transform.forward);
+        if (dot >= 0f)
+        {
+            direction = 1;
+        }
+        else
+        {
+            direction = -1;
         }
         Vector3 forwardForce = transform.forward * InputKey.z * speedMultiplier;
         if (Input.GetKey(KeyCode.Space))
         {
-            rotSpeed = 140;
+            rotSpeed = 160;
             rb.linearDamping = 0.45f;
         }
         else
         {
-            rotSpeed = 80;
-            rb.linearDamping = 0.05f;
+            rotSpeed = 100;
+            rb.linearDamping = 0.1f;
         }
         float turningLock = rb.linearVelocity.magnitude * 0.1f;
         if (turningLock > 1f)
@@ -92,7 +97,7 @@ public class CarController : MonoBehaviour
         rb.MoveRotation(rb.rotation * deltaRotation);
         
         
-        if(math.abs(rb.linearVelocity.magnitude) < maxSpeed)
+        if(rb.linearVelocity.magnitude < maxSpeed)
         {
              rb.AddForce(forwardForce);
         }
