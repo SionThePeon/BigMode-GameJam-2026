@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZoneManager
   car: {fileID: 8386052337367031217}
-  arrow: {fileID: 5820538963379033233, guid: 71c53a978ca54d943909f4ba3fbbeb05, type: 3}
+  arrow: {fileID: 919132149155446097, guid: f89ee99ae3e518e43b45751c66c83da0, type: 3}
 --- !u!4 &335059833
 Transform:
   m_ObjectHideFlags: 0

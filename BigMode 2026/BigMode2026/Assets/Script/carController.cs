@@ -1,9 +1,12 @@
 using System;
 using System.Data.Common;
+using System.Threading;
 using JetBrains.Annotations;
 using Unity.Mathematics;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CarController : MonoBehaviour
@@ -19,19 +22,35 @@ public class CarController : MonoBehaviour
 
     [SerializeField] private float maxSpeed;
 
+    public int pizzaCount;
+
+    public float gas;
+
 
     void Start()
     {
+       gas = 20f;
+       pizzaCount = 10;
        rb = GetComponent<Rigidbody>();
     }
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && pizzaCount > 0)
         {
             ShootPizza();
         }
         InputKey = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Timer();
+    }
+
+    void Timer()
+    {
+        gas -= Time.deltaTime;
+        if (gas <= 0f)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     void FixedUpdate()
@@ -83,6 +102,7 @@ public class CarController : MonoBehaviour
         GameObject pizzaInstance = Instantiate(pizza, transform.position + transform.forward * 6.3f,Quaternion.identity);
         Rigidbody pizzaRB = pizzaInstance.GetComponent<Rigidbody>();
         pizzaRB.linearVelocity = rb.linearVelocity + transform.forward * 20f;
+        pizzaCount --;
         
     }
 
