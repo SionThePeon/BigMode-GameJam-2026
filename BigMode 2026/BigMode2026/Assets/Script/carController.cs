@@ -25,11 +25,13 @@ public class CarController : MonoBehaviour
     public int pizzaCount;
 
     public float gas;
+    public float maxGas;
 
 
     void Start()
     {
        gas = 20f;
+       maxGas = gas;
        pizzaCount = 10;
        rb = GetComponent<Rigidbody>();
     }
