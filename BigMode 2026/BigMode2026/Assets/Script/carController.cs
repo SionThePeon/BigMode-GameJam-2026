@@ -26,11 +26,13 @@ public class CarController : MonoBehaviour
 
     public float gas = 20f;
     public float maxGas;
-
+    private bool slow;
 
     void Start()
     {
+        slow = false;
        maxGas = gas;
+
        rb = GetComponent<Rigidbody>();
     }
     
@@ -97,8 +99,12 @@ public class CarController : MonoBehaviour
         
         rb.MoveRotation(rb.rotation * deltaRotation);
         
-        
-        if(rb.linearVelocity.magnitude < maxSpeed)
+        float limit = maxSpeed;
+        if (slow)
+        {
+            limit = maxSpeed/10f;
+        }
+        if(rb.linearVelocity.magnitude < limit)
         {
              rb.AddForce(forwardForce);
         }
@@ -112,6 +118,22 @@ public class CarController : MonoBehaviour
         pizzaRB.linearVelocity = rb.linearVelocity + transform.forward * 20f;
         pizzaCount --;
         
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Snow")
+        {
+            
+            slow = true;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Snow")
+        {
+            slow = false;
+        }
     }
 
 }
