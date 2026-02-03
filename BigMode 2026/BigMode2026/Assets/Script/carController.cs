@@ -49,7 +49,8 @@ public class CarController : MonoBehaviour
         gas -= Time.deltaTime;
         if (gas <= 0f)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadSceneAsync("Mechanic");
         }
     }
 
