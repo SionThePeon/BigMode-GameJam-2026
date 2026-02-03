@@ -22,17 +22,24 @@ public class CarController : MonoBehaviour
 
     [SerializeField] private float maxSpeed;
 
-    public int pizzaCount = 10;
+    public static int pizzaCount;
+    public static int maxPizza = 10;
 
-    public float gas = 20f;
-    public float maxGas;
+    public static float gas;
+    public static float maxGas = 5f;
     private bool slow;
+
+    public static bool snowTires = false;
+
+    public static float pizzaVelocity;
+    public static float pizzaVelocityMax = 20f;
 
     void Start()
     {
         slow = false;
-       maxGas = gas;
-
+        gas = maxGas;
+        pizzaCount = maxPizza;
+        pizzaVelocity = pizzaVelocityMax;
        rb = GetComponent<Rigidbody>();
     }
     
@@ -115,7 +122,8 @@ public class CarController : MonoBehaviour
     {
         GameObject pizzaInstance = Instantiate(pizza, transform.position + transform.forward * 6.3f,Quaternion.identity);
         Rigidbody pizzaRB = pizzaInstance.GetComponent<Rigidbody>();
-        pizzaRB.linearVelocity = rb.linearVelocity + transform.forward * 20f;
+        //pizzaRB.linearVelocity = rb.linearVelocity + transform.forward * 20f;
+        pizzaRB.linearVelocity = rb.linearVelocity + transform.forward * pizzaVelocity;
         pizzaCount --;
         
     }
@@ -124,8 +132,10 @@ public class CarController : MonoBehaviour
     {
         if (other.tag == "Snow")
         {
-            
-            slow = true;
+            if (!snowTires)
+            {
+                slow = true;
+            }
         }
     }
     void OnTriggerExit(Collider other)
