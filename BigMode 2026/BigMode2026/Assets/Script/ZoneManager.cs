@@ -11,6 +11,19 @@ public class ZoneManager : MonoBehaviour
 
     private GameObject arrowInstance;
 
+    private int area1Count = 0;
+    private int area2Count = 0;
+    private int area3Count = 0;
+
+    public int area1Total = 4;
+    public int area2Total = 5;
+
+    public int area3Total = 5;
+
+    public int area1Bonus = 100;
+    public int area2Bonus = 200;
+    public int area3Bonus = 300;
+
 
 
 
@@ -55,6 +68,34 @@ public class ZoneManager : MonoBehaviour
             }
         }
         return nearest;
+    }
+
+    public void IncreaseAreaCount(int code)
+    {
+        if (code == 1)
+        {
+            area1Count ++;
+            if (area1Count == area1Total)
+            {
+                CarController.money += area1Bonus;
+            }
+        }
+        else if (code == 2)
+        {
+            area2Count ++;
+            if (area2Count == area2Total)
+            {
+                CarController.money += area2Bonus;
+            }
+        }
+        else if (code == 3)
+        {
+            area3Count ++;
+            if (area3Count == area3Total)
+            {
+                CarController.money += area3Bonus;
+            }
+        }
     }
 
     }

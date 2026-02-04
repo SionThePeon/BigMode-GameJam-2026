@@ -19965,6 +19965,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9335ca022f9886549b6d5df0b4d7d3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  minTip: 1
+  maxTip: 3
+  area: 1
 --- !u!65 &960938934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31044,6 +31047,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ZoneManager
   car: {fileID: 2084246719}
   arrow: {fileID: 1519641262559958057, guid: e12e24a91535851478fd8ad9790e1dee, type: 3}
+  area1Count: 0
+  area2Count: 0
+  area3Count: 0
+  area1Total: 5
+  area2Total: 5
+  area3Total: 5
+  area1Bonus: 100
+  area2Bonus: 200
+  area3Bonus: 300
 --- !u!4 &1526493241
 Transform:
   m_ObjectHideFlags: 0
@@ -32489,6 +32501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9335ca022f9886549b6d5df0b4d7d3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  minTip: 1
+  maxTip: 3
+  area: 1
 --- !u!65 &1598885565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33483,7 +33498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a853befa15128241805fe7672c8521e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIController
-  playerStats: {fileID: 2084246722}
   pizzaText: {fileID: 8548709}
   fuelNeedle: {fileID: 757324517}
   minRotation: 0
@@ -39394,6 +39408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9335ca022f9886549b6d5df0b4d7d3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  minTip: 1
+  maxTip: 3
+  area: 1
 --- !u!65 &1836747409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43951,6 +43968,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9335ca022f9886549b6d5df0b4d7d3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  minTip: 1
+  maxTip: 3
+  area: 1
 --- !u!65 &2040453956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44444,6 +44464,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9335ca022f9886549b6d5df0b4d7d3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  minTip: 1
+  maxTip: 3
+  area: 1
 --- !u!65 &2048360757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45878,9 +45901,6 @@ MonoBehaviour:
   carSpeed: 520
   backSpeed: 320
   maxSpeed: 70
-  pizzaCount: 15
-  gas: 90
-  maxGas: 0
 --- !u!54 &2084246723
 Rigidbody:
   m_ObjectHideFlags: 0
