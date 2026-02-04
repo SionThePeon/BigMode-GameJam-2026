@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Data.SqlTypes;
+using UnityEditor;
 
 public class menuController : MonoBehaviour
 {
@@ -18,6 +20,23 @@ public class menuController : MonoBehaviour
     public static int pizzaLevel = 0;
     public static int snowTiresLevel = 0;
     public static int pizzaVelLevel = 0;
+
+    private int[] gasUpgradeCosts = new int[] {1,2,3,4,5};
+    private int[] capacUpgradeCosts = new int[] {1,2,3,4,5};
+    private int[] snowTirePrice = new int[] {5, 0};
+    private int[] velUpgradeCosts = new int[] {2, 4, 6};
+
+
+    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI gasUpgradeText;
+    public TextMeshProUGUI capUpgradeText;
+    public TextMeshProUGUI stUpgradeText;
+    public TextMeshProUGUI pizzaVelText;
+
+
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Awake()
     {
@@ -25,6 +44,18 @@ public class menuController : MonoBehaviour
         pizzaUpgradeImage.sprite = pizzaBarSprites[pizzaLevel];
         tireUpgradeImage.sprite = tireBarSprites[snowTiresLevel];
         pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
+
+        gasUpgradeText.text = gasUpgradeCosts[gasLevel].ToString();
+        capUpgradeText.text = capacUpgradeCosts[pizzaLevel].ToString();
+        stUpgradeText.text = snowTirePrice[snowTiresLevel].ToString();
+        pizzaVelText.text = velUpgradeCosts[pizzaVelLevel].ToString();
+
+
+    }
+
+    public void Update()
+    {
+        moneyText.text = CarController.money.ToString();
     }
     public void startRun()
     {
@@ -36,9 +67,16 @@ public class menuController : MonoBehaviour
         {
             return;
         }
-        CarController.maxGas += 10;
-        gasLevel += 1;
-        gasUpgradeImage.sprite = gasBarSprites[gasLevel];
+
+        int cost = gasUpgradeCosts[gasLevel];
+        if(CarController.money >= cost)
+        {
+            CarController.money -= cost;
+            CarController.maxGas += 10;
+            gasLevel += 1;
+            gasUpgradeText.text = gasUpgradeCosts[gasLevel].ToString();
+            gasUpgradeImage.sprite = gasBarSprites[gasLevel];
+        }
     }
 
     public void upgradePizzaCap()
@@ -47,9 +85,16 @@ public class menuController : MonoBehaviour
         {
             return;
         }
-        CarController.maxPizza += 3;
-        pizzaLevel += 1;
-        pizzaUpgradeImage.sprite = pizzaBarSprites[pizzaLevel];
+        int cost = capacUpgradeCosts[pizzaLevel];
+        if(CarController.money >= cost)
+        {
+            CarController.money -= cost;
+            CarController.maxPizza += 3;
+            capUpgradeText.text = capacUpgradeCosts[pizzaLevel].ToString();
+            pizzaLevel += 1;
+            pizzaUpgradeImage.sprite = pizzaBarSprites[pizzaLevel];
+        }
+        
 
     }
 
@@ -59,9 +104,15 @@ public class menuController : MonoBehaviour
         {
             return;
         }
-        CarController.snowTires = true;
-        snowTiresLevel += 1;
-        tireUpgradeImage.sprite = tireBarSprites[snowTiresLevel];
+        int cost = snowTirePrice[snowTiresLevel];
+        if(CarController.money >= cost)
+        {
+            CarController.money -= cost;
+            CarController.snowTires = true;
+            stUpgradeText.text = snowTirePrice[snowTiresLevel].ToString();
+            snowTiresLevel += 1;
+            tireUpgradeImage.sprite = tireBarSprites[snowTiresLevel];
+        }
 
     }
 
@@ -71,10 +122,15 @@ public class menuController : MonoBehaviour
         {
             return;
         }
-
-        CarController.pizzaVelocityMax += 25;   
-        pizzaVelLevel += 1;
-         pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
+        int cost = velUpgradeCosts[pizzaVelLevel];
+        if(CarController.money >= cost)
+        {
+            CarController.money -= cost;
+            CarController.pizzaVelocityMax += 25;   
+            pizzaVelLevel += 1;
+            pizzaVelText.text = velUpgradeCosts[pizzaVelLevel].ToString();
+            pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
+        }
     }
 
 
