@@ -131,11 +131,12 @@ public class CarController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Snow")
-        {
-            if (!snowTires)
+        if (other.tag == "Snow" && !snowTires)
+        {   
+            slow = true;
+            if (rb.linearVelocity.magnitude > maxSpeed / 3)
             {
-                slow = true;
+                rb.linearVelocity = rb.linearVelocity.normalized * (maxSpeed/3);
             }
         }
     }
