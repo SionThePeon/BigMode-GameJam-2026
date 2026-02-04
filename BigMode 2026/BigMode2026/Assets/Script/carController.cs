@@ -6,10 +6,12 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CarController : MonoBehaviour
 {
+    private float drain;
     public Rigidbody rb;
     public Vector3 InputKey;
 
@@ -35,8 +37,11 @@ public class CarController : MonoBehaviour
     public static float pizzaVelocity;
     public static float pizzaVelocityMax = 20f;
 
+    private bool bridge = false;
+
     void Start()
     {
+        drain = 1f;
         slow = false;
         gas = maxGas;
         pizzaCount = maxPizza;
@@ -56,7 +61,7 @@ public class CarController : MonoBehaviour
 
     void Timer()
     {
-        gas -= Time.deltaTime;
+        gas -= Time.deltaTime * drain;
         if (gas <= 0f)
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -112,6 +117,11 @@ public class CarController : MonoBehaviour
         {
             limit = maxSpeed/10f;
         }
+        else if (bridge)
+        {
+            forwardForce *= 2f;
+            limit = maxSpeed * 4;
+        }
         if(rb.linearVelocity.magnitude < limit)
         {
              rb.AddForce(forwardForce);
@@ -139,12 +149,22 @@ public class CarController : MonoBehaviour
                 rb.linearVelocity = rb.linearVelocity.normalized * (maxSpeed/3);
             }
         }
+        else if (other.tag == "Bridge")
+        {
+            drain = 2.5f;
+            bridge = true;
+        }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.tag == "Snow")
         {
             slow = false;
+        }
+        else if (other.tag == "Bridge")
+        {
+            bridge = false;
+            drain = 1f;
         }
     }
 

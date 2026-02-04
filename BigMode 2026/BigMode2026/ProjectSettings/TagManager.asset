@@ -8,6 +8,7 @@ TagManager:
   - IceyTrack
   - Pizza
   - Snow
+  - Bridge
   layers:
   - Default
   - TransparentFX
