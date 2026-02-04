@@ -7,6 +7,8 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI pizzaText;
      public RectTransform fuelNeedle;
 
+     public TextMeshProUGUI moneyText;
+
     public float minRotation = -30f;
     public float maxRotation = 30f;
 
@@ -14,6 +16,7 @@ public class UIController : MonoBehaviour
     void Update()
     {
         pizzaText.text = CarController.pizzaCount.ToString();
+        moneyText.text = CarController.money.ToString();
 
         float percent = CarController.gas / CarController.maxGas;
         float rotation = Mathf.Lerp(minRotation, maxRotation, percent);
