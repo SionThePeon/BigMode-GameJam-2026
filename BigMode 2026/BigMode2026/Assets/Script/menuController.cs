@@ -5,28 +5,31 @@ using TMPro;
 
 public class menuController : MonoBehaviour
 {
-    public TextMeshProUGUI gasUpgrade;
-    public TextMeshProUGUI pizzaUpgrade;
-    public TextMeshProUGUI tireUpgrade;
-    public TextMeshProUGUI pizzaVelUpgradeText;
+    [SerializeField] Image gasUpgradeImage;
+    [SerializeField] Image pizzaUpgradeImage;
+    [SerializeField] Image tireUpgradeImage;
+    [SerializeField] Image pizzaVelUpgradeImage;
 
-    public int gasLevel = 0;
-    public int pizzaLevel = 0;
-    public int snowTiresLevel = 0;
-    public int pizzaVelLevel = 0;
+    [SerializeField] Sprite[] gasBarSprites;      
+    [SerializeField] Sprite[] pizzaBarSprites;    
+    [SerializeField] Sprite[] tireBarSprites;     
+    [SerializeField] Sprite[] pizzaVelBarSprites; 
+    public static int gasLevel = 0;
+    public static int pizzaLevel = 0;
+    public static int snowTiresLevel = 0;
+    public static int pizzaVelLevel = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void Start()
+    public void Awake()
     {
-        gasUpgrade.text = "Upgrade Level: " + gasLevel + " / 5";
-        pizzaUpgrade.text = "Upgrade Level: " + pizzaLevel + " / 5";
-        tireUpgrade.text = "Upgrade Level: " + snowTiresLevel + " / 1";
-        pizzaVelUpgradeText.text = "Upgrade Level: " + pizzaVelLevel + " / 3";
+        gasUpgradeImage.sprite = gasBarSprites[gasLevel];
+        pizzaUpgradeImage.sprite = pizzaBarSprites[pizzaLevel];
+        tireUpgradeImage.sprite = tireBarSprites[snowTiresLevel];
+        pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
     }
     public void startRun()
     {
-        SceneManager.LoadSceneAsync("FullMap");
+        SceneManager.LoadScene("FullMap");
     }
-
     public void upgradeGas()
     {
         if (gasLevel >= 5)
@@ -35,8 +38,9 @@ public class menuController : MonoBehaviour
         }
         CarController.maxGas += 10;
         gasLevel += 1;
-        gasUpgrade.text = "Upgrade Level: " + gasLevel + " / 5";
+        gasUpgradeImage.sprite = gasBarSprites[gasLevel];
     }
+
     public void upgradePizzaCap()
     {
         if(pizzaLevel >= 5)
@@ -45,7 +49,7 @@ public class menuController : MonoBehaviour
         }
         CarController.maxPizza += 3;
         pizzaLevel += 1;
-        pizzaUpgrade.text = "Upgrade Level: " + pizzaLevel + " / 5";
+        pizzaUpgradeImage.sprite = pizzaBarSprites[pizzaLevel];
 
     }
 
@@ -57,7 +61,7 @@ public class menuController : MonoBehaviour
         }
         CarController.snowTires = true;
         snowTiresLevel += 1;
-        tireUpgrade.text = "Upgrade Level: " + snowTiresLevel + " / 1";
+        tireUpgradeImage.sprite = tireBarSprites[snowTiresLevel];
 
     }
 
@@ -70,7 +74,7 @@ public class menuController : MonoBehaviour
 
         CarController.pizzaVelocityMax += 25;   
         pizzaVelLevel += 1;
-        pizzaVelUpgradeText.text = "Upgrade Level: " + pizzaVelLevel + " / 3";
+         pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
     }
 
 

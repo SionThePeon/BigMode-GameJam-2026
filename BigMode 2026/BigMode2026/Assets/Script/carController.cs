@@ -3,7 +3,6 @@ using System.Data.Common;
 using System.Threading;
 using JetBrains.Annotations;
 using Unity.Mathematics;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
@@ -17,7 +16,7 @@ public class CarController : MonoBehaviour
     public GameObject pizza;
 
     [SerializeField] private float carSpeed;
-    [SerializeField] private float backSpeed;
+    [SerializeField] private float backSpeed; 
     private float rotSpeed;
 
     [SerializeField] private float maxSpeed;
@@ -61,7 +60,7 @@ public class CarController : MonoBehaviour
         if (gas <= 0f)
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SceneManager.LoadSceneAsync("Mechanic");
+            SceneManager.LoadScene("Mechanic");
         }
     }
 
