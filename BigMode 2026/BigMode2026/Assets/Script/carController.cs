@@ -29,7 +29,7 @@ public class CarController : MonoBehaviour
     public static float gas;
     public static float maxGas = 40f;
 
-    public static int money = 0;
+    public static int money = 50;
     private bool slow;
 
     public static bool snowTires = false;

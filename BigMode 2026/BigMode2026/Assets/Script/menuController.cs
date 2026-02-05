@@ -73,8 +73,8 @@ public class menuController : MonoBehaviour
         {
             CarController.money -= cost;
             CarController.maxGas += 10;
-            gasLevel += 1;
             gasUpgradeText.text = gasUpgradeCosts[gasLevel].ToString();
+            gasLevel += 1;
             gasUpgradeImage.sprite = gasBarSprites[gasLevel];
         }
     }
@@ -127,8 +127,8 @@ public class menuController : MonoBehaviour
         {
             CarController.money -= cost;
             CarController.pizzaVelocityMax += 25;   
-            pizzaVelLevel += 1;
             pizzaVelText.text = velUpgradeCosts[pizzaVelLevel].ToString();
+            pizzaVelLevel += 1;
             pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
         }
     }
