@@ -39,6 +39,8 @@ public class CarController : MonoBehaviour
 
     private bool bridge = false;
 
+    public ParticleSystem smokeEffect;
+
     void Start()
     {
         drain = 1f;
@@ -57,6 +59,21 @@ public class CarController : MonoBehaviour
         }
         InputKey = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         Timer();
+
+        if (Input.GetKey(KeyCode.Space) && rb.linearVelocity.magnitude > 5f)
+        {
+        if (!smokeEffect.isPlaying)
+            {
+            smokeEffect.Play();
+            }
+        }
+        else
+        {
+        if (smokeEffect.isPlaying)
+            {
+            smokeEffect.Stop();
+            }
+        }
     }
 
     void Timer()
