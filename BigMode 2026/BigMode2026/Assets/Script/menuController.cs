@@ -55,7 +55,7 @@ public class menuController : MonoBehaviour
 
     public void Update()
     {
-        moneyText.text = CarController.money.ToString();
+        moneyText.text = "$" + CarController.money.ToString();
     }
     public void startRun()
     {

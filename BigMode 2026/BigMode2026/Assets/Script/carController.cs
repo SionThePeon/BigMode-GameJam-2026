@@ -27,7 +27,7 @@ public class CarController : MonoBehaviour
     public static int maxPizza = 10;
 
     public static float gas;
-    public static float maxGas = 40f;
+    public static float maxGas = 120f;
 
     public static int money = 50;
     private bool slow;

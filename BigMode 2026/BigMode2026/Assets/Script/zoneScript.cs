@@ -7,6 +7,14 @@ public class zoneScript : MonoBehaviour
     public int minTip;
     public int maxTip;
     public int area;
+
+    private UIController uiController;
+    
+
+    void Start()
+    {
+        uiController = FindFirstObjectByType<UIController>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         
@@ -23,6 +31,7 @@ public class zoneScript : MonoBehaviour
     {
          int tip = Random.Range(minTip, maxTip + 1);
             CarController.money += tip;
+            uiController.ShowTipPopup(tip);
             Debug.Log(CarController.money);
     }
 
