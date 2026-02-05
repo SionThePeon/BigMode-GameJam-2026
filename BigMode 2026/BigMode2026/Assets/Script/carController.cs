@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
+using Unity.VisualScripting;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CarController : MonoBehaviour
@@ -40,6 +41,11 @@ public class CarController : MonoBehaviour
     private bool bridge = false;
 
     public ParticleSystem smokeEffect;
+
+    // private bool land = false;
+
+    // private float zWaitTime = 1f;
+
 
     void Start()
     {
@@ -86,8 +92,38 @@ public class CarController : MonoBehaviour
         }
     }
 
+    void ClampXRotation()
+    {
+        float maxAngle = 45f;
+        float snap = 0.2f;
+        Quaternion rot = rb.rotation;
+        Vector3 euler = rot.eulerAngles;
+        float x = euler.x > 180f ? euler.x - 360f : euler.x;
+        float clamped = Mathf.Clamp(x, -maxAngle, maxAngle);
+        if (!Mathf.Approximately(x, clamped))
+        {
+            euler.x = Mathf.Lerp(x, clamped, snap);
+            rb.MoveRotation(Quaternion.Euler(euler));
+        }
+    }
+    void ClampZRotation()
+    {
+        float snap = 0.2f;
+        Quaternion rot = rb.rotation;
+        Vector3 euler = rot.eulerAngles;
+        float z = euler.z > 180f ? euler.z - 360f : euler.z;
+        float clamped = Mathf.Clamp(z, -0.05f, 0.05f);
+        if (!Mathf.Approximately(z, clamped))
+        {
+            euler.z = Mathf.Lerp(z, clamped, snap);
+            rb.MoveRotation(Quaternion.Euler(euler));
+        }
+    }
+
     void FixedUpdate()
     {
+        ClampXRotation();
+        ClampZRotation();
         int direction;
         float speedMultiplier;
         if (InputKey.z >= 0)
@@ -128,7 +164,19 @@ public class CarController : MonoBehaviour
         
         
         rb.MoveRotation(rb.rotation * deltaRotation);
-        
+        if (IsGrounded()){
+        // if (land)
+        //     {
+        //         zWaitTime -= Time.deltaTime;
+        //         rb.constraints &= ~RigidbodyConstraints.FreezeRotationZ;
+        //         if (zWaitTime < 0f)
+        //         {
+        //             rb.constraints |= RigidbodyConstraints.FreezeRotationZ;
+        //             land = false;
+        //             zWaitTime = 1f;
+
+        //         }
+        //     }
         float limit = maxSpeed;
         if (slow)
         {
@@ -142,6 +190,15 @@ public class CarController : MonoBehaviour
         if(rb.linearVelocity.magnitude < limit)
         {
              rb.AddForce(forwardForce);
+        }
+        }
+        // else
+        // {
+        //     land = true;
+        // }
+        if (rb.linearVelocity.y > 20f)
+        {
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 20f, rb.linearVelocity.z);
         }
 
     }
@@ -184,5 +241,18 @@ public class CarController : MonoBehaviour
             drain = 1f;
         }
     }
+
+    bool IsGrounded()
+    {
+        if (Physics.Raycast(this.transform.position, Vector3.down, 0.6f))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
 }
