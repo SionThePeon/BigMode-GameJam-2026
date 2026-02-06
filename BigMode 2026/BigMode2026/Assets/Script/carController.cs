@@ -42,6 +42,8 @@ public class CarController : MonoBehaviour
 
     public ParticleSystem smokeEffect;
 
+    [SerializeField] private soundEffectManager soundManager;
+
     // private bool land = false;
 
     // private float zWaitTime = 1f;
@@ -71,6 +73,7 @@ public class CarController : MonoBehaviour
         if (!smokeEffect.isPlaying)
             {
             smokeEffect.Play();
+            soundManager.PlayDriftSound();
             }
         }
         else
@@ -210,7 +213,7 @@ public class CarController : MonoBehaviour
         //pizzaRB.linearVelocity = rb.linearVelocity + transform.forward * 20f;
         pizzaRB.linearVelocity = rb.linearVelocity + transform.forward * pizzaVelocity;
         pizzaCount --;
-        
+        soundManager.PlayPizzaShootSound();
     }
 
     void OnTriggerEnter(Collider other)

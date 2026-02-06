@@ -9,6 +9,8 @@ public class zoneScript : MonoBehaviour
     public int area;
 
     private UIController uiController;
+
+    [SerializeField] private soundEffectManager soundManager;
     
 
     void Start()
@@ -32,6 +34,7 @@ public class zoneScript : MonoBehaviour
          int tip = Random.Range(minTip, maxTip + 1);
             CarController.money += tip;
             uiController.ShowTipPopup(tip);
+            soundManager.PlayMoneySound();
             Debug.Log(CarController.money);
     }
 

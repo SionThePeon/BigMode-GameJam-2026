@@ -1367,6 +1367,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &23467704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9181,6 +9182,155 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313765934}
   m_CullTransparentMesh: 1
+--- !u!1 &331574333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331574336}
+  - component: {fileID: 331574335}
+  - component: {fileID: 331574334}
+  m_Layer: 0
+  m_Name: SoundEffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &331574334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331574333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b031119ce865b2d489c2967a1a8e1c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  driftSound: {fileID: 8300000, guid: a49721fcaaa3b8841a822ada098e9a3c, type: 3}
+  pizzaShootSound: {fileID: 8300000, guid: abb12b449832ae34088c663bf6a7e76b, type: 3}
+  moneySound: {fileID: 8300000, guid: 5641211f11a9f4c48a147147322e32f6, type: 3}
+  audioSource: {fileID: 331574335}
+  driftVolume: 0.083
+  pizzaShootVolume: 0.118
+  moneyVolume: 0.125
+--- !u!82 &331574335
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331574333}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &331574336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331574333}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2649.467, y: 232.1182, z: 121.81104}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &332455319
 GameObject:
   m_ObjectHideFlags: 0
@@ -19352,6 +19502,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &827926982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19476,8 +19627,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279107328
+  m_fontColor: {r: 0, g: 1, b: 0.049598217, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -19562,7 +19713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 17.556}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52, y: 418.3}
+  m_AnchoredPosition: {x: 91, y: 327}
   m_SizeDelta: {x: 318.813, y: 101.405}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &838245564
@@ -27324,8 +27475,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278845184
+  m_fontColor: {r: 0, g: 1, b: 0.034408808, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -27463,6 +27614,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &960938934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32205,6 +32357,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &1132833208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34169,6 +34322,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &1233551338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37344,6 +37498,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &1393320045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41881,6 +42036,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &1598885565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49389,6 +49545,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &1836747409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53999,6 +54156,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &2040453956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54495,6 +54653,7 @@ MonoBehaviour:
   minTip: 1
   maxTip: 3
   area: 1
+  soundManager: {fileID: 331574334}
 --- !u!65 &2048360757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56076,6 +56235,7 @@ MonoBehaviour:
   backSpeed: 900
   maxSpeed: 70
   smokeEffect: {fileID: 880370142}
+  soundManager: {fileID: 331574334}
 --- !u!54 &2084246723
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -83164,3 +83324,4 @@ SceneRoots:
   - {fileID: 713760504}
   - {fileID: 62678406}
   - {fileID: 217181283}
+  - {fileID: 331574336}
