@@ -21,10 +21,15 @@ public class menuController : MonoBehaviour
     public static int snowTiresLevel = 0;
     public static int pizzaVelLevel = 0;
 
-    private int[] gasUpgradeCosts = new int[] {1,2,3,4,5};
-    private int[] capacUpgradeCosts = new int[] {1,2,3,4,5};
-    private int[] snowTirePrice = new int[] {5, 0};
-    private int[] velUpgradeCosts = new int[] {2, 4, 6};
+    private int[] gasUpgradeCosts = new int[] {2,10,20,100,200};
+    private int[] capacUpgradeCosts = new int[] {10,30,50,90,150};
+    private int[] snowTirePrice = new int[] {500, 0};
+    private int[] velUpgradeCosts = new int[] {20, 70, 150};
+
+    
+    private int[] gasUpgradeBonus = new int[] {30, 50, 50 , 60, 55};
+    private int[] capacUpgradeBonus = new int[] {4, 8, 10, 10, 10};
+    private int[] velUpgradeBonus = new int[] {15, 25, 25};
 
 
     public TextMeshProUGUI moneyText;
@@ -72,9 +77,9 @@ public class menuController : MonoBehaviour
         if(CarController.money >= cost)
         {
             CarController.money -= cost;
-            CarController.maxGas += 10;
-            gasUpgradeText.text = gasUpgradeCosts[gasLevel].ToString();
+            CarController.maxGas += gasUpgradeBonus[gasLevel];
             gasLevel += 1;
+            gasUpgradeText.text = gasUpgradeCosts[gasLevel].ToString();
             gasUpgradeImage.sprite = gasBarSprites[gasLevel];
         }
     }
@@ -89,9 +94,9 @@ public class menuController : MonoBehaviour
         if(CarController.money >= cost)
         {
             CarController.money -= cost;
-            CarController.maxPizza += 3;
-            capUpgradeText.text = capacUpgradeCosts[pizzaLevel].ToString();
+            CarController.maxPizza += capacUpgradeBonus[pizzaLevel];
             pizzaLevel += 1;
+            capUpgradeText.text = capacUpgradeCosts[pizzaLevel].ToString();
             pizzaUpgradeImage.sprite = pizzaBarSprites[pizzaLevel];
         }
         
@@ -109,8 +114,8 @@ public class menuController : MonoBehaviour
         {
             CarController.money -= cost;
             CarController.snowTires = true;
-            stUpgradeText.text = snowTirePrice[snowTiresLevel].ToString();
             snowTiresLevel += 1;
+            stUpgradeText.text = snowTirePrice[snowTiresLevel].ToString();
             tireUpgradeImage.sprite = tireBarSprites[snowTiresLevel];
         }
 
@@ -126,9 +131,9 @@ public class menuController : MonoBehaviour
         if(CarController.money >= cost)
         {
             CarController.money -= cost;
-            CarController.pizzaVelocityMax += 25;   
-            pizzaVelText.text = velUpgradeCosts[pizzaVelLevel].ToString();
+            CarController.pizzaVelocityMax += velUpgradeBonus[pizzaLevel];   
             pizzaVelLevel += 1;
+            pizzaVelText.text = velUpgradeCosts[pizzaVelLevel].ToString();
             pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
         }
     }

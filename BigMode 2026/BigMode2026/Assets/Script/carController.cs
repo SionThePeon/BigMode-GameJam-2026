@@ -25,12 +25,12 @@ public class CarController : MonoBehaviour
     [SerializeField] private float maxSpeed;
 
     public static int pizzaCount;
-    public static int maxPizza = 10;
+    public static int maxPizza = 8;
 
     public static float gas;
-    public static float maxGas = 120f;
+    public static float maxGas = 25f;
 
-    public static int money = 50;
+    public static int money = 0;
     private bool slow;
 
     public static bool snowTires = false;
@@ -59,6 +59,10 @@ public class CarController : MonoBehaviour
     
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene("Mechanic");
+        }
         if (Input.GetKeyDown(KeyCode.E) && pizzaCount > 0)
         {
             ShootPizza();
