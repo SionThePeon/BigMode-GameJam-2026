@@ -1,18 +1,31 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
-public class startMenuController : MonoBehaviour
+
+public class StartMenuController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-     public void playGame()
+    public GameObject slideshowImage;
+    public GameObject buttonPanel;
+    
+    private slideShow slideshowController;
+
+    void Start()
     {
-        SceneManager.LoadSceneAsync("FullMap");
+        slideshowController = slideshowImage.GetComponent<slideShow>();
+        slideshowImage.SetActive(false); 
     }
 
-    public void quitGame()
+    public void OnPlayGame()
+    {
+        if (buttonPanel != null)
+        {
+            buttonPanel.SetActive(false);
+        }
+        
+        slideshowController.PlaySlideshowThenLoadScene();
+    }
+
+    public void OnQuitGame()
     {
         Application.Quit();
     }
-
 }
