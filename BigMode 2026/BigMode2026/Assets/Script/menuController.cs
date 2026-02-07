@@ -51,7 +51,7 @@ public class menuController : MonoBehaviour
         pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
 
         gasUpgradeText.text = "Gas Capacity: $" + gasUpgradeCosts[gasLevel].ToString();
-        capUpgradeText.text = "Pizza Cap: $" +capacUpgradeCosts[pizzaLevel].ToString();
+        capUpgradeText.text = "Pizza Cap: $" + capacUpgradeCosts[pizzaLevel].ToString();
         stUpgradeText.text = "Snow Tires: $" + snowTirePrice[snowTiresLevel].ToString();
         pizzaVelText.text = "Pizza Velocity: $" + velUpgradeCosts[pizzaVelLevel].ToString();
 
@@ -79,7 +79,7 @@ public class menuController : MonoBehaviour
             CarController.money -= cost;
             CarController.maxGas += gasUpgradeBonus[gasLevel];
             gasLevel += 1;
-            gasUpgradeText.text = gasUpgradeCosts[gasLevel].ToString();
+            gasUpgradeText.text = "Gas Capacity: $" + gasUpgradeCosts[gasLevel].ToString();
             gasUpgradeImage.sprite = gasBarSprites[gasLevel];
         }
     }
@@ -96,7 +96,7 @@ public class menuController : MonoBehaviour
             CarController.money -= cost;
             CarController.maxPizza += capacUpgradeBonus[pizzaLevel];
             pizzaLevel += 1;
-            capUpgradeText.text = capacUpgradeCosts[pizzaLevel].ToString();
+            capUpgradeText.text = "Pizza Cap: $" + capacUpgradeCosts[pizzaLevel].ToString();
             pizzaUpgradeImage.sprite = pizzaBarSprites[pizzaLevel];
         }
         
@@ -115,7 +115,7 @@ public class menuController : MonoBehaviour
             CarController.money -= cost;
             CarController.snowTires = true;
             snowTiresLevel += 1;
-            stUpgradeText.text = snowTirePrice[snowTiresLevel].ToString();
+            stUpgradeText.text = "Snow Tires: $" + snowTirePrice[snowTiresLevel].ToString();
             tireUpgradeImage.sprite = tireBarSprites[snowTiresLevel];
         }
 
@@ -133,7 +133,7 @@ public class menuController : MonoBehaviour
             CarController.money -= cost;
             CarController.pizzaVelocityMax += velUpgradeBonus[pizzaLevel];   
             pizzaVelLevel += 1;
-            pizzaVelText.text = velUpgradeCosts[pizzaVelLevel].ToString();
+            pizzaVelText.text = "Pizza Velocity: $" + velUpgradeCosts[pizzaVelLevel].ToString();
             pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
         }
     }

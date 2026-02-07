@@ -10,14 +10,14 @@ public class slideShow : MonoBehaviour
     
     private Image imageComponent;
 
-     void Awake()  // Changed from Start() to Awake()
+     void Awake()
     {
         imageComponent = GetComponent<Image>();
     }
 
     public void PlaySlideshowThenLoadScene()
     {
-        gameObject.SetActive(true);  // Activate the image
+        gameObject.SetActive(true); 
         StartCoroutine(SlideshowCoroutine());
     }
 

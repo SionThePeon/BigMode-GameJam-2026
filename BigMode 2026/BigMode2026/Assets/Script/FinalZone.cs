@@ -8,7 +8,7 @@ public class FinalZone : MonoBehaviour
         
         if (other.CompareTag("Pizza"))
         {
-        //    SceneManager.LoadScene();        
+            SceneManager.LoadScene("FinalScene");        
         }
     }
     
