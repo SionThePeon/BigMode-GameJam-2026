@@ -18798,8 +18798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::soundEffectManager
   driftSound: {fileID: 8300000, guid: ee14b8930b5d36f4bb44620a00e027e1, type: 3}
-  pizzaShootSound: {fileID: 8300000, guid: 1a599f638268e9943963e874aa92b4dd, type: 3}
-  moneySound: {fileID: 8300000, guid: 57f63b4e4bfb8ea459abc7e71dbf7a86, type: 3}
+  pizzaShootSound: {fileID: 8300000, guid: 75cb301440f18fe4887fe2123c0350d6, type: 3}
+  moneySound: {fileID: 8300000, guid: 0461164a10853f84c810477f21fb472c, type: 3}
   audioSource: {fileID: 709659533}
   driftVolume: 0.881
   pizzaShootVolume: 0.5
