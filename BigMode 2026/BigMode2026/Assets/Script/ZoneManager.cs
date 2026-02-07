@@ -13,7 +13,7 @@ public class ZoneManager : MonoBehaviour
 
     private int area1Count = 0;
     private int area2Count = 0;
-    private int area3Count = 0;
+    public int area3Count = 0;
 
     public int area1Total = 4;
     public int area2Total = 5;
@@ -22,7 +22,7 @@ public class ZoneManager : MonoBehaviour
 
     public int area1Bonus = 100;
     public int area2Bonus = 200;
-    public int area3Bonus = 300;
+    
 
 
 
@@ -91,10 +91,6 @@ public class ZoneManager : MonoBehaviour
         else if (code == 3)
         {
             area3Count ++;
-            if (area3Count == area3Total)
-            {
-                CarController.money += area3Bonus;
-            }
         }
     }
 
