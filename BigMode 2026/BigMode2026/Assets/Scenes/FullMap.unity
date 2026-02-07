@@ -992,7 +992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14919917}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21658362, y: -0.0000000033422771, z: 7.414815e-10, w: 0.97626406}
+  m_LocalRotation: {x: 0.21658355, y: 1.4120107e-15, z: 1.8439228e-15, w: 0.9762641}
   m_LocalPosition: {x: 511.90735, y: 9.26, z: 24.380001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1811,6 +1811,7 @@ GameObject:
   - component: {fileID: 48052280}
   - component: {fileID: 48052282}
   - component: {fileID: 48052281}
+  - component: {fileID: 48052283}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -1890,6 +1891,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48052279}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &48052283
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48052279}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.00000000325963, y: -0.00000011594966, z: 9.264424e-23}
 --- !u!1 &58599957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3042,6 +3064,7 @@ GameObject:
   - component: {fileID: 74072891}
   - component: {fileID: 74072893}
   - component: {fileID: 74072892}
+  - component: {fileID: 74072894}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -3121,6 +3144,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74072890}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &74072894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74072890}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.019999987, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: -0.000000056345016, z: 1.15805286e-23}
 --- !u!1 &75805357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,7 +3285,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76114683}
-  - component: {fileID: 76114684}
   m_Layer: 6
   m_Name: igloo (10)
   m_TagString: Untagged
@@ -3266,27 +3309,6 @@ Transform:
   - {fileID: 502604032}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &76114684
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76114682}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &76371025
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,7 +3984,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 118158001}
-  - component: {fileID: 118158002}
   m_Layer: 6
   m_Name: igloo (21)
   m_TagString: Untagged
@@ -3987,27 +4008,6 @@ Transform:
   - {fileID: 1460846440}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &118158002
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118158000}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &119339800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5918,7 +5918,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 169804108}
-  - component: {fileID: 169804109}
   m_Layer: 6
   m_Name: igloo (1)
   m_TagString: Untagged
@@ -5943,27 +5942,6 @@ Transform:
   - {fileID: 201033277}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &169804109
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169804107}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &182622436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6722,6 +6700,7 @@ GameObject:
   - component: {fileID: 201033277}
   - component: {fileID: 201033279}
   - component: {fileID: 201033278}
+  - component: {fileID: 201033280}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -6801,6 +6780,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201033276}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &201033280
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201033276}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.0000000107102105, y: -0.000000056345016, z: 9.264424e-23}
 --- !u!1 &201719967
 GameObject:
   m_ObjectHideFlags: 0
@@ -9165,6 +9165,7 @@ GameObject:
   - component: {fileID: 303284388}
   - component: {fileID: 303284390}
   - component: {fileID: 303284389}
+  - component: {fileID: 303284391}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -9244,6 +9245,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303284387}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &303284391
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303284387}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019613083, y: 0.01999999, z: 0.01999999}
+  m_Center: {x: 0.0001933978, y: 0.000000003022281, z: 1.1027755e-23}
 --- !u!1 &304229460
 GameObject:
   m_ObjectHideFlags: 0
@@ -9706,6 +9728,7 @@ GameObject:
   - component: {fileID: 308629854}
   - component: {fileID: 308629856}
   - component: {fileID: 308629855}
+  - component: {fileID: 308629857}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -9785,6 +9808,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308629853}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &308629857
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308629853}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999987, y: 0.019999987, z: 0.019999996}
+  m_Center: {x: -0.000000062864274, y: 0.0000000032596281, z: 1.15805286e-23}
 --- !u!1 &313765934
 GameObject:
   m_ObjectHideFlags: 0
@@ -9819,8 +9863,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -720.14703, y: -350.49902}
-  m_SizeDelta: {x: 61.085, y: 60.437}
+  m_AnchoredPosition: {x: -728.401, y: -330.232}
+  m_SizeDelta: {x: 94.72, y: 115.916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313765936
 MonoBehaviour:
@@ -9842,7 +9886,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 030fab5abcc024e4cb0e2e5e8ae71e83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72602c36b92a5e745b62c1fa38e12f49, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12506,6 +12550,7 @@ GameObject:
   - component: {fileID: 418860249}
   - component: {fileID: 418860251}
   - component: {fileID: 418860250}
+  - component: {fileID: 418860252}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -12585,6 +12630,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418860248}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &418860252
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418860248}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: 0.0000000013969834, z: 1.4551915e-11}
 --- !u!1 &419065813
 GameObject:
   m_ObjectHideFlags: 0
@@ -12931,7 +12997,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440932561}
-  - component: {fileID: 440932562}
   m_Layer: 6
   m_Name: igloo (9)
   m_TagString: Untagged
@@ -12956,27 +13021,6 @@ Transform:
   - {fileID: 1082098077}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &440932562
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440932560}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &454783265
 GameObject:
   m_ObjectHideFlags: 0
@@ -13937,6 +13981,7 @@ GameObject:
   - component: {fileID: 495566393}
   - component: {fileID: 495566395}
   - component: {fileID: 495566394}
+  - component: {fileID: 495566396}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -14016,6 +14061,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495566392}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &495566396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495566392}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: 0.000000004190951, z: 4.6322114e-23}
 --- !u!1 &495841422
 GameObject:
   m_ObjectHideFlags: 0
@@ -14116,6 +14182,7 @@ GameObject:
   - component: {fileID: 502604032}
   - component: {fileID: 502604034}
   - component: {fileID: 502604033}
+  - component: {fileID: 502604035}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -14195,6 +14262,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502604031}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &502604035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502604031}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.0000000107102105, y: 0.000000003259629, z: 9.264424e-23}
 --- !u!1 &504728603
 GameObject:
   m_ObjectHideFlags: 0
@@ -15598,7 +15686,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 562087896}
-  - component: {fileID: 562087897}
   m_Layer: 6
   m_Name: igloo (19)
   m_TagString: Untagged
@@ -15623,27 +15710,6 @@ Transform:
   - {fileID: 943565534}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &562087897
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562087895}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &564393129
 GameObject:
   m_ObjectHideFlags: 0
@@ -16634,7 +16700,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 623270056}
-  - component: {fileID: 623270057}
   m_Layer: 6
   m_Name: igloo (15)
   m_TagString: Untagged
@@ -16659,27 +16724,6 @@ Transform:
   - {fileID: 418860249}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!65 &623270057
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623270055}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &630254525
 GameObject:
   m_ObjectHideFlags: 0
@@ -17249,6 +17293,7 @@ GameObject:
   - component: {fileID: 668769722}
   - component: {fileID: 668769724}
   - component: {fileID: 668769723}
+  - component: {fileID: 668769725}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -17328,6 +17373,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668769721}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &668769725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668769721}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: 0.0000000032596286, z: -1.4551915e-11}
 --- !u!1 &676556923
 GameObject:
   m_ObjectHideFlags: 0
@@ -21142,6 +21208,7 @@ GameObject:
   - component: {fileID: 816559433}
   - component: {fileID: 816559435}
   - component: {fileID: 816559434}
+  - component: {fileID: 816559436}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -21221,6 +21288,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816559432}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &816559436
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816559432}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.0000000107102105, y: 0.000000062864274, z: 9.264424e-23}
 --- !u!1 &816902874
 GameObject:
   m_ObjectHideFlags: 0
@@ -21607,6 +21695,7 @@ GameObject:
   - component: {fileID: 838245565}
   - component: {fileID: 838245567}
   - component: {fileID: 838245566}
+  - component: {fileID: 838245568}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -21686,6 +21775,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838245564}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &838245568
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838245564}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000062864274, y: 0.000000062864274, z: 2.3161057e-23}
 --- !u!1 &854613272
 GameObject:
   m_ObjectHideFlags: 0
@@ -21695,7 +21805,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854613273}
-  - component: {fileID: 854613274}
   m_Layer: 6
   m_Name: igloo (8)
   m_TagString: Untagged
@@ -21720,27 +21829,6 @@ Transform:
   - {fileID: 303284388}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!65 &854613274
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854613272}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &857063265
 GameObject:
   m_ObjectHideFlags: 0
@@ -21973,7 +22061,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 866392377}
-  - component: {fileID: 866392378}
   m_Layer: 6
   m_Name: igloo (5)
   m_TagString: Untagged
@@ -21998,27 +22085,6 @@ Transform:
   - {fileID: 838245565}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -52.463, z: 0}
---- !u!65 &866392378
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866392376}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &869109574
 GameObject:
   m_ObjectHideFlags: 0
@@ -27900,6 +27966,7 @@ GameObject:
   - component: {fileID: 912578566}
   - component: {fileID: 912578568}
   - component: {fileID: 912578567}
+  - component: {fileID: 912578569}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -27979,6 +28046,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912578565}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &912578569
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912578565}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01999999, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.000000062864274, y: 0.0000000032596286, z: 3.4741586e-23}
 --- !u!1 &922165574
 GameObject:
   m_ObjectHideFlags: 0
@@ -27988,7 +28076,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 922165575}
-  - component: {fileID: 922165576}
   m_Layer: 6
   m_Name: igloo (2)
   m_TagString: Untagged
@@ -28013,27 +28100,6 @@ Transform:
   - {fileID: 1635597972}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &922165576
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922165574}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &923801065
 GameObject:
   m_ObjectHideFlags: 0
@@ -28606,7 +28672,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943409961}
-  - component: {fileID: 943409962}
   m_Layer: 6
   m_Name: igloo (17)
   m_TagString: Untagged
@@ -28631,27 +28696,6 @@ Transform:
   - {fileID: 912578566}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 41.048, z: 0}
---- !u!65 &943409962
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943409960}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &943565533
 GameObject:
   m_ObjectHideFlags: 0
@@ -28663,6 +28707,7 @@ GameObject:
   - component: {fileID: 943565534}
   - component: {fileID: 943565536}
   - component: {fileID: 943565535}
+  - component: {fileID: 943565537}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -28742,6 +28787,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943565533}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &943565537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943565533}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: 0.000000004190951, z: 4.6322114e-23}
 --- !u!1 &945566997
 GameObject:
   m_ObjectHideFlags: 0
@@ -33091,6 +33157,7 @@ GameObject:
   - component: {fileID: 1082098077}
   - component: {fileID: 1082098079}
   - component: {fileID: 1082098078}
+  - component: {fileID: 1082098080}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -33170,6 +33237,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082098076}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1082098080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082098076}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.000000014435501, y: 0.000000062864274, z: 9.264424e-23}
 --- !u!1 &1083644184
 GameObject:
   m_ObjectHideFlags: 0
@@ -35051,7 +35139,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.1705, y: 1.6642, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1208651343}
   m_Father: {fileID: 1648904206}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -35079,7 +35168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b84a77ba6e6ea794f84af56c5650517a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4a9d191b87bb746b1fe0ab66aa50ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35150,6 +35239,7 @@ GameObject:
   - component: {fileID: 1171475366}
   - component: {fileID: 1171475368}
   - component: {fileID: 1171475367}
+  - component: {fileID: 1171475369}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -35229,6 +35319,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171475365}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1171475369
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171475365}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.00000000325963, y: -0.00000011594966, z: 9.264424e-23}
 --- !u!1 &1172684069
 GameObject:
   m_ObjectHideFlags: 0
@@ -35911,6 +36022,7 @@ GameObject:
   - component: {fileID: 1202074913}
   - component: {fileID: 1202074915}
   - component: {fileID: 1202074914}
+  - component: {fileID: 1202074916}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -35990,6 +36102,163 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202074912}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1202074916
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202074912}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: 0.000000056345016, y: 0.0000000032596281, z: -1.4551915e-11}
+--- !u!1 &1208651342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1208651343}
+  - component: {fileID: 1208651345}
+  - component: {fileID: 1208651344}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1208651343
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208651342}
+  m_LocalRotation: {x: -0, y: -0, z: 0.26650718, w: 0.96383303}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1158029163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.913}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 12.5, y: 12.4}
+  m_SizeDelta: {x: 60.9873, y: 59.3322}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1208651344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208651342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: CJ
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e6858ceb7270e6b42ad163017b4e234f, type: 2}
+  m_sharedMaterial: {fileID: -6560494665364078160, guid: e6858ceb7270e6b42ad163017b4e234f, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1208651345
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208651342}
+  m_CullTransparentMesh: 1
 --- !u!1 &1209857816
 GameObject:
   m_ObjectHideFlags: 0
@@ -36889,6 +37158,7 @@ GameObject:
   - component: {fileID: 1256793517}
   - component: {fileID: 1256793519}
   - component: {fileID: 1256793518}
+  - component: {fileID: 1256793520}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -36968,6 +37238,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256793516}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1256793520
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256793516}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.00000000325963, y: 0.000000062864274, z: 9.264424e-23}
 --- !u!1 &1260503198
 GameObject:
   m_ObjectHideFlags: 0
@@ -38330,6 +38621,7 @@ GameObject:
   - component: {fileID: 1317169488}
   - component: {fileID: 1317169490}
   - component: {fileID: 1317169489}
+  - component: {fileID: 1317169491}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -38409,6 +38701,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317169487}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1317169491
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317169487}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: 0.0000000032596286, z: -1.4551915e-11}
 --- !u!1 &1318841057
 GameObject:
   m_ObjectHideFlags: 0
@@ -38534,6 +38847,7 @@ GameObject:
   - component: {fileID: 1332617365}
   - component: {fileID: 1332617367}
   - component: {fileID: 1332617366}
+  - component: {fileID: 1332617368}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -38613,6 +38927,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332617364}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1332617368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332617364}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.000000014435501, y: 0.000000003259629, z: 9.264424e-23}
 --- !u!1 &1333503327
 GameObject:
   m_ObjectHideFlags: 0
@@ -39983,7 +40318,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383574651}
-  - component: {fileID: 1383574652}
   m_Layer: 6
   m_Name: igloo (14)
   m_TagString: Untagged
@@ -40008,27 +40342,6 @@ Transform:
   - {fileID: 816559433}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &1383574652
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383574650}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1384699040
 GameObject:
   m_ObjectHideFlags: 0
@@ -40280,7 +40593,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1392013801}
-  - component: {fileID: 1392013802}
   m_Layer: 6
   m_Name: igloo (3)
   m_TagString: Untagged
@@ -40305,27 +40617,6 @@ Transform:
   - {fileID: 48052280}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &1392013802
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392013800}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1392642667
 GameObject:
   m_ObjectHideFlags: 0
@@ -41032,6 +41323,7 @@ GameObject:
   - component: {fileID: 1416667187}
   - component: {fileID: 1416667189}
   - component: {fileID: 1416667188}
+  - component: {fileID: 1416667190}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -41111,6 +41403,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416667186}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1416667190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416667186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: 0.000000004190951, z: 4.6322114e-23}
 --- !u!1 &1427874190
 GameObject:
   m_ObjectHideFlags: 0
@@ -41614,7 +41927,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1454241170}
-  - component: {fileID: 1454241171}
   m_Layer: 6
   m_Name: igloo (13)
   m_TagString: Untagged
@@ -41639,27 +41951,6 @@ Transform:
   - {fileID: 1549760331}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &1454241171
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454241169}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1459039698
 GameObject:
   m_ObjectHideFlags: 0
@@ -41934,7 +42225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459966166}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21658364, y: -0.000000003342278, z: 7.4148426e-10, w: 0.97626406}
+  m_LocalRotation: {x: 0.2165836, y: 1.4907915e-15, z: 1.4888144e-15, w: 0.9762641}
   m_LocalPosition: {x: 511.90735, y: 9.260004, z: 24.380005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41952,6 +42243,7 @@ GameObject:
   - component: {fileID: 1460846440}
   - component: {fileID: 1460846442}
   - component: {fileID: 1460846441}
+  - component: {fileID: 1460846443}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -42031,6 +42323,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460846439}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1460846443
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460846439}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: 0.0000000060535963, z: 4.6322114e-23}
 --- !u!1 &1463347199
 GameObject:
   m_ObjectHideFlags: 0
@@ -42406,7 +42719,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1490005405}
-  - component: {fileID: 1490005406}
   m_Layer: 6
   m_Name: igloo (26)
   m_TagString: Untagged
@@ -42431,27 +42743,6 @@ Transform:
   - {fileID: 1659611367}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1490005406
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490005404}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1490027113
 GameObject:
   m_ObjectHideFlags: 0
@@ -43510,6 +43801,7 @@ GameObject:
   - component: {fileID: 1532535589}
   - component: {fileID: 1532535591}
   - component: {fileID: 1532535590}
+  - component: {fileID: 1532535592}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -43589,6 +43881,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532535588}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1532535592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532535588}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: 0.0000000032596286, z: -1.4551915e-11}
 --- !u!1 &1537360137
 GameObject:
   m_ObjectHideFlags: 0
@@ -43915,6 +44228,7 @@ GameObject:
   - component: {fileID: 1549760331}
   - component: {fileID: 1549760333}
   - component: {fileID: 1549760332}
+  - component: {fileID: 1549760334}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -43994,6 +44308,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549760330}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1549760334
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549760330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: -0.00000000698492, y: 0.000000062864274, z: 9.264424e-23}
 --- !u!1 &1554770012
 GameObject:
   m_ObjectHideFlags: 0
@@ -45964,7 +46299,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1629509713}
-  - component: {fileID: 1629509714}
   m_Layer: 6
   m_Name: igloo (6)
   m_TagString: Untagged
@@ -45989,27 +46323,6 @@ Transform:
   - {fileID: 308629854}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -36.167, z: 0}
---- !u!65 &1629509714
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629509712}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1634216867
 GameObject:
   m_ObjectHideFlags: 0
@@ -46244,6 +46557,7 @@ GameObject:
   - component: {fileID: 1635597972}
   - component: {fileID: 1635597974}
   - component: {fileID: 1635597973}
+  - component: {fileID: 1635597975}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -46323,6 +46637,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635597971}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1635597975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635597971}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999994, y: 0.019999992, z: 0.019999996}
+  m_Center: {x: 0.0000000041909507, y: -0.000000056345016, z: 9.264424e-23}
 --- !u!1 &1644685124
 GameObject:
   m_ObjectHideFlags: 0
@@ -47223,6 +47558,7 @@ GameObject:
   - component: {fileID: 1659611367}
   - component: {fileID: 1659611369}
   - component: {fileID: 1659611368}
+  - component: {fileID: 1659611370}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -47302,6 +47638,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659611366}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &1659611370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659611366}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: -4.6566173e-10, z: 4.6322114e-23}
 --- !u!1 &1663448990
 GameObject:
   m_ObjectHideFlags: 0
@@ -50120,7 +50477,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1752324626}
-  - component: {fileID: 1752324627}
   m_Layer: 6
   m_Name: igloo (20)
   m_TagString: Untagged
@@ -50145,27 +50501,6 @@ Transform:
   - {fileID: 2016388061}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1752324627
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752324625}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1753533435
 GameObject:
   m_ObjectHideFlags: 0
@@ -50319,7 +50654,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1757423926}
-  - component: {fileID: 1757423927}
   m_Layer: 6
   m_Name: igloo (24)
   m_TagString: Untagged
@@ -50344,27 +50678,6 @@ Transform:
   - {fileID: 1317169488}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1757423927
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757423925}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1757483496
 GameObject:
   m_ObjectHideFlags: 0
@@ -51492,7 +51805,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1795463935}
-  - component: {fileID: 1795463936}
   m_Layer: 6
   m_Name: igloo (25)
   m_TagString: Untagged
@@ -51517,27 +51829,6 @@ Transform:
   - {fileID: 1416667187}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1795463936
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795463934}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1795712428
 GameObject:
   m_ObjectHideFlags: 0
@@ -54168,7 +54459,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1854024471}
-  - component: {fileID: 1854024472}
   m_Layer: 6
   m_Name: igloo (22)
   m_TagString: Untagged
@@ -54193,27 +54483,6 @@ Transform:
   - {fileID: 495566393}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1854024472
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854024470}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1855944936
 GameObject:
   m_ObjectHideFlags: 0
@@ -54589,7 +54858,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1880843850}
-  - component: {fileID: 1880843851}
   m_Layer: 6
   m_Name: igloo (11)
   m_TagString: Untagged
@@ -54614,27 +54882,6 @@ Transform:
   - {fileID: 1332617365}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &1880843851
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880843849}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1887881023
 GameObject:
   m_ObjectHideFlags: 0
@@ -54788,7 +55035,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1893140996}
-  - component: {fileID: 1893140997}
   m_Layer: 6
   m_Name: igloo (7)
   m_TagString: Untagged
@@ -54813,27 +55059,6 @@ Transform:
   - {fileID: 74072891}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -141.584, z: 0}
---- !u!65 &1893140997
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893140995}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1896998335
 GameObject:
   m_ObjectHideFlags: 0
@@ -56075,7 +56300,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1943099195}
-  - component: {fileID: 1943099196}
   m_Layer: 6
   m_Name: igloo (4)
   m_TagString: Untagged
@@ -56100,27 +56324,6 @@ Transform:
   - {fileID: 1171475366}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &1943099196
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943099194}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1946855317
 GameObject:
   m_ObjectHideFlags: 0
@@ -56241,7 +56444,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1953081346}
-  - component: {fileID: 1953081347}
   m_Layer: 6
   m_Name: igloo (23)
   m_TagString: Untagged
@@ -56266,27 +56468,6 @@ Transform:
   - {fileID: 668769722}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1953081347
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953081345}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1960424736
 GameObject:
   m_ObjectHideFlags: 0
@@ -56851,7 +57032,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1964975491}
-  - component: {fileID: 1964975492}
   m_Layer: 6
   m_Name: igloo (16)
   m_TagString: Untagged
@@ -56876,27 +57056,6 @@ Transform:
   - {fileID: 1202074913}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -220.93, z: 0}
---- !u!65 &1964975492
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964975490}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1967200340
 GameObject:
   m_ObjectHideFlags: 0
@@ -57805,6 +57964,7 @@ GameObject:
   - component: {fileID: 2016388061}
   - component: {fileID: 2016388063}
   - component: {fileID: 2016388062}
+  - component: {fileID: 2016388064}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -57884,6 +58044,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016388060}
   m_Mesh: {fileID: 4711208715938537054, guid: 4170263cedc400d44bbcf16972201d80, type: 3}
+--- !u!65 &2016388064
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016388060}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999988, y: 0.01999999, z: 0.019999996}
+  m_Center: {x: -0.000000003259629, y: 0.0000000060535963, z: 4.6322114e-23}
 --- !u!1 &2021939988
 GameObject:
   m_ObjectHideFlags: 0
@@ -59687,7 +59868,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2068633828}
-  - component: {fileID: 2068633829}
   m_Layer: 6
   m_Name: igloo (12)
   m_TagString: Untagged
@@ -59712,27 +59892,6 @@ Transform:
   - {fileID: 1256793517}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &2068633829
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068633827}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2068915726
 GameObject:
   m_ObjectHideFlags: 0
@@ -60715,7 +60874,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2103874751}
-  - component: {fileID: 2103874752}
   m_Layer: 6
   m_Name: igloo (18)
   m_TagString: Untagged
@@ -60740,27 +60898,6 @@ Transform:
   - {fileID: 1532535589}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2103874752
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103874750}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2107592739
 GameObject:
   m_ObjectHideFlags: 0
@@ -61553,7 +61690,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 855741093674999836}
-  - component: {fileID: 855741093674999837}
   m_Layer: 6
   m_Name: igloo
   m_TagString: Untagged
@@ -64745,27 +64881,6 @@ Transform:
   - {fileID: 8908599072847368465}
   m_Father: {fileID: 1795712429}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &855741093674999837
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48382159098198694}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &892235815116903492
 GameObject:
   m_ObjectHideFlags: 0
@@ -87478,6 +87593,7 @@ GameObject:
   - component: {fileID: 8908599072847368465}
   - component: {fileID: 7491404409246086802}
   - component: {fileID: 6612979767158317709}
+  - component: {fileID: 9058551659372746850}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -87485,6 +87601,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &9058551659372746850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058551659372746849}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019150011, y: 0.019999994, z: 0.022633985}
+  m_Center: {x: 0.00042493272, y: -0.000000115725086, z: 0.0013169821}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

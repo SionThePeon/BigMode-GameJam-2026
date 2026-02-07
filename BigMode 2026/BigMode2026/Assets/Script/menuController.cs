@@ -50,10 +50,10 @@ public class menuController : MonoBehaviour
         tireUpgradeImage.sprite = tireBarSprites[snowTiresLevel];
         pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
 
-        gasUpgradeText.text = gasUpgradeCosts[gasLevel].ToString();
-        capUpgradeText.text = capacUpgradeCosts[pizzaLevel].ToString();
-        stUpgradeText.text = snowTirePrice[snowTiresLevel].ToString();
-        pizzaVelText.text = velUpgradeCosts[pizzaVelLevel].ToString();
+        gasUpgradeText.text = "Gas Capacity: $" + gasUpgradeCosts[gasLevel].ToString();
+        capUpgradeText.text = "Pizza Cap: $" +capacUpgradeCosts[pizzaLevel].ToString();
+        stUpgradeText.text = "Snow Tires: $" + snowTirePrice[snowTiresLevel].ToString();
+        pizzaVelText.text = "Pizza Velocity: $" + velUpgradeCosts[pizzaVelLevel].ToString();
 
 
     }

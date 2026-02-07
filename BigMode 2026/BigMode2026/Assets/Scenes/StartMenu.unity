@@ -933,6 +933,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: faf8b115460bbb1458d911eb96f2ce32, type: 3}
   - {fileID: 21300000, guid: 8ed56c3fb081f534ea277a51d7a7b5a6, type: 3}
   - {fileID: 21300000, guid: 260cc25367856044b83e21b9fa93944c, type: 3}
+  - {fileID: 21300000, guid: f46c6a37d9e8f3e4488356f6e7a8754b, type: 3}
   intervalSeconds: 4
 --- !u!1 &1792611494
 GameObject:
