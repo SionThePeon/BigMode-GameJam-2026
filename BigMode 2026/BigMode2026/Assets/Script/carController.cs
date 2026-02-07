@@ -99,6 +99,10 @@ public class CarController : MonoBehaviour
         }
     }
 
+    void SlowSmooth()
+    {   
+        rb.linearVelocity *= 0.8f;
+    }
     void ClampXRotation()
     {
         float maxAngle = 45f;
@@ -198,6 +202,10 @@ public class CarController : MonoBehaviour
         {
              rb.AddForce(forwardForce);
         }
+        else
+            {
+                SlowSmooth();
+            }
         }
         // else
         // {
