@@ -39,6 +39,7 @@ public class menuController : MonoBehaviour
     public TextMeshProUGUI pizzaVelText;
 
 
+    [SerializeField] private upgradeSoundEffects upgradeSoundEffects;
 
 
 
@@ -81,6 +82,12 @@ public class menuController : MonoBehaviour
             gasLevel += 1;
             gasUpgradeText.text = "Gas Capacity: $" + gasUpgradeCosts[gasLevel].ToString();
             gasUpgradeImage.sprite = gasBarSprites[gasLevel];
+
+            if(upgradeSoundEffects != null)
+            {
+                upgradeSoundEffects.PlayUpgradeSound();
+            }
+
         }
     }
 
@@ -98,6 +105,12 @@ public class menuController : MonoBehaviour
             pizzaLevel += 1;
             capUpgradeText.text = "Pizza Cap: $" + capacUpgradeCosts[pizzaLevel].ToString();
             pizzaUpgradeImage.sprite = pizzaBarSprites[pizzaLevel];
+
+            if(upgradeSoundEffects != null)
+            {
+                upgradeSoundEffects.PlayUpgradeSound();
+            }
+
         }
         
 
@@ -117,6 +130,12 @@ public class menuController : MonoBehaviour
             snowTiresLevel += 1;
             stUpgradeText.text = "Snow Tires: $" + snowTirePrice[snowTiresLevel].ToString();
             tireUpgradeImage.sprite = tireBarSprites[snowTiresLevel];
+
+            if(upgradeSoundEffects != null)
+            {
+                upgradeSoundEffects.PlayUpgradeSound();
+            }
+
         }
 
     }
@@ -135,6 +154,12 @@ public class menuController : MonoBehaviour
             pizzaVelLevel += 1;
             pizzaVelText.text = "Pizza Velocity: $" + velUpgradeCosts[pizzaVelLevel].ToString();
             pizzaVelUpgradeImage.sprite = pizzaVelBarSprites[pizzaVelLevel];
+
+            if(upgradeSoundEffects != null)
+            {
+                upgradeSoundEffects.PlayUpgradeSound();
+            }
+
         }
     }
 
