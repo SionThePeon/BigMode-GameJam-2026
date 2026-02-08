@@ -44,6 +44,16 @@ public class CarController : MonoBehaviour
 
     [SerializeField] private soundEffectManager soundManager;
 
+    public AudioClip[] stations;
+
+    public int stationsLength = 0;
+
+    public AudioSource source;
+
+
+
+    public static int station = 0;
+
     // private bool land = false;
 
     // private float zWaitTime = 1f;
@@ -57,6 +67,8 @@ public class CarController : MonoBehaviour
         pizzaCount = maxPizza;
         pizzaVelocity = pizzaVelocityMax;
        rb = GetComponent<Rigidbody>();
+       source.PlayOneShot(stations[station]);
+
     }
     
     void Update()
@@ -86,6 +98,13 @@ public class CarController : MonoBehaviour
             {
             smokeEffect.Stop();
             }
+        }
+        if (Input.GetKey(KeyCode.R))
+        {
+
+            station = (station + 1) % stationsLength;
+            source.Stop();
+            source.PlayOneShot(stations[station]);
         }
     }
 

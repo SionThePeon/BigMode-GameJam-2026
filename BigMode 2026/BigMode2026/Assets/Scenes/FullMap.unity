@@ -61809,6 +61809,11 @@ MonoBehaviour:
   maxSpeed: 70
   smokeEffect: {fileID: 880370142}
   soundManager: {fileID: 709659534}
+  stations:
+  - {fileID: 8300000, guid: 7d233ad5834f8644f9d57d36326d1cf7, type: 3}
+  - {fileID: 8300000, guid: 37e436c0c395f8e4b8a3d2e516775dc6, type: 3}
+  stationsLength: 2
+  source: {fileID: 2131866960}
 --- !u!54 &2084246723
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -62379,7 +62384,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 37e436c0c395f8e4b8a3d2e516775dc6, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.569
   m_Pitch: 1
