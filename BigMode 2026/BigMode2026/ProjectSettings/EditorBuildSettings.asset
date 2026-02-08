@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/FullMap.unity
     guid: 6d52e4dd1df8bc64ab8023a1dc70561d
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/Mechanic.unity
     guid: 2b796acdb8401564a8fd4163ab7c53bc
   - enabled: 1

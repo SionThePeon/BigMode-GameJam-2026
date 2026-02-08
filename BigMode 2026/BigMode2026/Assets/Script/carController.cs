@@ -99,10 +99,11 @@ public class CarController : MonoBehaviour
             smokeEffect.Stop();
             }
         }
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
 
             station = (station + 1) % stationsLength;
+            Debug.Log("Station: " + station);
             source.Stop();
             source.PlayOneShot(stations[station]);
         }
